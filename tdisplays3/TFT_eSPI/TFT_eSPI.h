@@ -868,20 +868,20 @@ class TFT_eSPI : public Print { friend class TFT_eSprite; // Sprite class has ac
 /***************************************************************************************
 **                         Section 9: TFT_eSPI class conditional extensions
 ***************************************************************************************/
-Load the Touch extension
-#ifdef TOUCH_CS
-  #if defined (TFT_PARALLEL_8_BIT) || defined (RP2040_PIO_INTERFACE)
-    #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
-      #error >>>>------>> Touch functions not supported in 8/16 bit parallel mode or with RP2040 PIO.
-    #endif
-  #else
-    #include "Extensions/Touch.h"        // Loaded if TOUCH_CS is defined by user
-  #endif
-#else
-    #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
-      #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
-    #endif
-#endif
+// Load the Touch extension
+// #ifdef TOUCH_CS
+//   #if defined (TFT_PARALLEL_8_BIT) || defined (RP2040_PIO_INTERFACE)
+//     #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
+//       #error >>>>------>> Touch functions not supported in 8/16 bit parallel mode or with RP2040 PIO.
+//     #endif
+//   #else
+//     #include "Extensions/Touch.h"        // Loaded if TOUCH_CS is defined by user
+//   #endif
+// #else
+//     #if !defined(DISABLE_ALL_LIBRARY_WARNINGS)
+//       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+//     #endif
+// #endif
 
 // Load the Anti-aliased font extension
 #ifdef SMOOTH_FONT
