@@ -14,7 +14,7 @@ class DisplayController : public Component
 	void setup() override {
 		tft.init();
 		tft.fillScreen(TFT_BLACK);
-		tft.setRotation(3);
+		tft.setRotation(2);
 		tft.setFreeFont(FSB18);
 	}
 
