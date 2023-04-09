@@ -5,8 +5,8 @@
 
 // #define TFT_RGB_ORDER TFT_BGR // Colour order Blue-Green-Red
 
-#define TFT_WIDTH 240  // ST7789 172 x 320
-#define TFT_HEIGHT 240 // ST7789 240 x 320
+#define TFT_WIDTH 320  // ST7789 172 x 320
+#define TFT_HEIGHT 480 // ST7789 240 x 320
 
 #define CGRAM_OFFSET
 // #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
